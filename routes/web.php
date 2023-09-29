@@ -18,6 +18,8 @@ Route::get('/', function () {
 });
 
 Route::get('/mahasiswa', function (){
-    return view('universitas/mahasiswa')->with('mahasiswa01', 'Hakim Ziyech');
+    $arrMahasiswa = ["Kai Havertz", "Mason Mount", "Timo Werner", "Hakim Ziyech", "Olivier Giroud"];
+    return view('universitas/mahasiswa',['mahasiswa' =>
+    $arrMahasiswa]);
 });
 
