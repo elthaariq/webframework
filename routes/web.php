@@ -18,8 +18,12 @@ Route::get('/', function () {
 });
 
 Route::get('/mahasiswa', function (){
-    $arrMahasiswa = ["Kai Havertz", "Mason Mount", "Timo Werner", "Hakim Ziyech", "Olivier Giroud"];
-    return view('universitas/mahasiswa',['mahasiswa' =>
-    $arrMahasiswa]);
+    $arrMahasiswa = ["Kai Havertz", "Mason Mount", "Timo Werner", "Olivier Giroud"];
+    return view ("mahasiswa")->with("mahasiswa", $arrMahasiswa);
+});
+
+Route::get('/dosen', function (){
+    $arrDosen = ["Andi Purnomo", "Ahmad Ihsan", "Ahlijati Nuraminah"];
+    return view ("dosen")->with("dosen", $arrDosen);
 });
 
